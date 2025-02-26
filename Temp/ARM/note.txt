@@ -1,0 +1,82 @@
+http://infocenter.arm.com/help/index.jsp
+https://developer.arm.com/
+https://developer.arm.com/documentation/#sort=relevancy
+
+CoreMark Benchmarking for ARM Cortex Processors - Application Note 350
+https://developer.arm.com/documentation/dai0350/a
+
+NSACR 非安全模式下访问控制寄存器
+CPACR 协处理器访问控制寄存器
+
+undefined reference to _fini
+https://bugs.launchpad.net/gcc-arm-embedded/+bug/1680293
+http://distribute.atmel.no/tools/opensource/Atmel-ARM-GNU-Toolchain/4.8.4/readme.txt
+
+https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads
+https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads/5-2016-q3-update
+
+http://cration.rcstech.org/embedded/2014/03/02/arm-conditional-execution/
+
+A5 
+A7 R328 
+A8 AM335x
+A9 Zynq/qemu
+
+都是armv7-A构架，都可以支持ARM、Thumb-2、Thumb指令集
+
+
+https://blog.csdn.net/zhoutaopower/article/details/88049623
+https://blog.csdn.net/u012294613/article/details/132322281
+
+ARM Architecture Reference Manual for a full architectural description of the ARMv7 VMSA.
+
+=========FPU
+https://developer.arm.com/architectures/instruction-sets/floating-point
+
+VFPv1 	Obsolete. Details are available on request from Arm.  
+VFPv2 	An optional extension to:the Arm instruction set in the Armv5TE, Armv5TEJ, Armv6, and Armv6K architectures the Arm and Thumb instruction sets in the Armv6T2 architecture 
+VFPv3 	An optional extension to the Arm, Thumb, and ThumbEE instruction sets in the Armv7-A and Armv7-R profiles. VFPv3 can be implemented with either 32 or 16 doubleword registers. VFPv3U is a variant of VFPv3 that supports the trapping of floating-point exceptions to support code. 
+VFPv3 with Half-precision Extension 	VFPv3 and VFPv3U can be extended by the optional Half-precision Extension, that provides conversion functions in both directions between half-precision floating-point and single-precision floating-point. 
+VFPv4 	An optional extension to the Arm, Thumb, and ThumbEE instruction sets in the Armv7-A and Armv7-R profiles. VFPv4U is a variant of VFPv4 that supports the trapping of floating-point exceptions to support code. VFPv4 and VFPv4U add both the Half-precision Extension and the fused multiply-add instructions to the features of VFPv3. VFPv4 can be implemented with either 32 or 16 doubleword registers. 
+VFPv5 	The FPv5 FPU includes all the functionality of VFPv4 and adds optional double-precision floating-point arithmetic, conversions between integer, single-precision floating-point, double-precision floating-point and half-precision floating-point formats FPv5 also introduces new instructions. For more information refer to the Arm Architecture Reference Manual. 
+
+-mfpu=neon-vfpv4 3609
+-mfpu=vfpv4 3609
+-mfpu=fpv4-sp-d16 M4F
+-mfpu=vfp 富瀚微
+
+-mfpu=vfpv3-fp16 A5
+-mfpu=vfpv3-d16-fp16 A5
+-mfpu=neon-fp16 A5
+
+-mfpu=vfpv4 A7
+-mfpu=vfpv4-d16 A7
+-mfpu=neon-vfpv4 A7
+
+-mfpu=vfpv3 A8
+-mfpu=neon A8
+
+-mfpu=vfpv3-fp16 A9
+-mfpu=vfpv3-d16-fp16 A9
+-mfpu=neon-fp16 A9
+
+-mfpu=vfpv4 A15
+-mfpu=neon-vfpv4 A15
+
+默认多少个寄存器？如何获取到这个配置？linux的代码在哪个位置？
+-fp16表明支持16bit半精度浮点操作
+-d16表明只有前16个浮点寄存器可用
+detect 
+
+可用参数：
+fpa，fpe2，fpe3，maverick，
+vfp，vfpv3，vfpv3-fp16，vfpv3-d16，vfpv3-d16-fp16，vfpv3xd，vfpv3xd-fp16，
+neon，neon-fp16，vfpv4，vfpv4-d16，fpv4-sp-d16，neon-vfpv4
+
+vfp: 之前已经详细谈过。
+neon:前面也谈过。但neon并不完全支持 IEEE 754。
+
+-mfloat-abi=soft
+-mfloat-abi=softfp
+-mfloat-abi=hard
+=========FPU
