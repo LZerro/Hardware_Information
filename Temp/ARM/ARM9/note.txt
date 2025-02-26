@@ -1,7 +1,0 @@
-S3C2440 ARM920T  ARMv4
-S3C2416 ARM926EJ ARMv5
-F1C100S ARM926EJ-S
-
-e DSP-enhanced
-j Jazelle technology 一种java加速技术
-s 有可综合的软核 synthesizable
